@@ -1,0 +1,630 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FCF6F1;
+}
+
+.form-login-group {
+    margin-top: 500px;
+}
+
+.resi-table {
+    color: rgb(152, 209, 160);
+    font-weight: bold;
+}
+
+.form-input-qty {
+    width: 60px;
+    height: 30px;
+    border: 0px;
+    font-size: 12px;
+    font-weight: bold;
+    background:rgb(152, 209, 160);
+    color: white;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+
+.form-input-qty:focus-visible {
+    width: 60px;
+    height: 30px;
+    border: 0px;
+    font-size: 12px;
+    font-weight: bold;
+    background:rgb(152, 209, 160);
+    color: white;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+
+.bg-green-light {
+    background: rgb(165 231 200) !important;
+}
+
+.nav-link {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: #3B1B36;
+    margin: 15px;
+}
+
+/* open css baanner */
+.group-text-banner {
+    margin-top: 200px;
+    width: 394px;
+}
+
+.span-text-one {
+    color: #F4C245;
+}
+
+.span-text-two {
+    color: #096B54;
+}
+
+.heading-one-banner {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 75px;
+    color: #491937;
+}
+
+.text-paragraf-banner {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: #483055;
+    width: 366px;
+    margin-top: 10px;
+}
+
+.button-banner {
+    font-family: 'Poppins';
+    width: 228px;
+    height: 50px;
+    background: #299E60;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #FFFFFF;
+    border-radius: 0px;
+}
+
+.image-banner {
+    margin-top: 150px;
+}
+/* close css banner */
+
+/* open section pink */
+
+/* open all class section pink */
+.margin-top-about {
+    margin-top: 150px;
+
+}
+/* close all class section pink */
+
+
+.section-pink {
+    width: 100%;
+    height: 100%;
+    /* margin-top: 100px; */
+}
+
+.heading-our-text {
+    margin-top: 50px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    color: #3B1B36;
+}
+
+.text-paragraf-our {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    color: #483055;
+    width: 1028px;
+    margin: 0px auto;
+}
+/* close section pink */
+
+/* open css about */
+.heading-one-about {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    color: #3B1B36;
+    width: 447px;
+}
+
+.text-paragraf-about {
+    width: 366px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color: #483055;
+}
+
+.text-point-paragraf-about {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color: #F6B11E;
+}
+
+.icon-cheack {
+    color: #73C938;
+    font-size: 16px;
+}
+
+.active-menu {
+    color: #73C938;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.button-about {
+    width: 228px;
+    height: 50px;
+    background-color: #299E60;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #FFFFFF;
+    border-radius: 0px;
+}
+
+.group-text-about {
+    margin: 30px;
+}
+/* close css about */
+
+
+/* open css support */
+.heading-five-support {
+    text-align: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    color: #3B1B36;
+
+}
+
+.support {
+    background-color: white;
+    padding: 30px;
+}
+/* close css suport */
+
+/* open css food menu */
+.card-salad-food {
+    background: #FFFFFF;
+    border: none;
+    border-radius: 10px; /* Menambahkan border radius pada kartu untuk tampilan lebih modern */
+    transition: 1s;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan pada kartu */
+}
+
+.card-salad-food:hover {
+    box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.25); /* Efek hover */
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px; /* Ukuran gambar yang konsisten */
+    object-fit: cover; /* Menjaga gambar tetap terpotong sesuai proporsi */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-name {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #483055;
+    margin-bottom: 10px; /* Memberikan jarak bawah pada nama produk */
+    height: 40px; /* Ukuran tinggi konsisten untuk teks nama produk */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Menambahkan efek elipsis jika teks terlalu panjang */
+}
+
+.card-price {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #73C938;
+    margin-bottom: 15px; /* Memberikan jarak bawah pada harga produk */
+    height: 30px; /* Ukuran tinggi konsisten untuk teks harga produk */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Menambahkan efek elipsis jika teks terlalu panjang */
+}
+
+.button-buy-in-card {
+    background: #299E60;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #FFFFFF;
+    border-radius: 5px; /* Memberikan border radius untuk efek sudut melengkung */
+    width: 160px;
+    height: 40px;
+    display: inline-block;
+    line-height: 25px; /* Memastikan teks di dalam tombol terletak di tengah */
+    text-align: center;
+    transition: background-color 0.3s; /* Efek transisi saat hover */
+}
+
+.button-buy-in-card:hover {
+    background-color: #22733A; /* Menambahkan efek hover pada tombol */
+}
+
+.heading-five-menu-food {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #483055;
+    text-align: center;
+}
+
+.margin-food {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+/* close css food menu */
+
+/* open css footer */
+.custom-footer {
+    position: relative;
+    font-weight:600;
+    background-color: #299E60;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 100px;
+}
+
+.custom-footer p {
+    margin: 5px;
+}
+
+.product-image {
+    text-align: center;
+}
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+    /* margin-top: 45px; */
+    margin-bottom: 35px;
+}
+.product-details {
+    padding: 35px;
+    margin: 20px auto;
+    text-align: left;
+}
+.product-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #483055;
+}
+.product-price {
+    color: #93D55C;
+    font-size: 40px;
+    font-weight: 700;
+}
+.btn-buy {
+    font-family: 'Poppins';
+    width: 125px;
+    height: 50px;
+    background: #299E60;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #FFFFFF;
+    border-radius: 0px;
+}
+
+
+.horizontal-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+}
+
+.horizontal-list li{
+    margin: 10px;
+    padding: 5px;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: start;
+}
+
+.text-p{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.bg-color{
+    width: 100%;
+    height: auto;
+    background-color: #F0F0F0;
+}
+
+.modal-content {
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .modal-title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #483055;
+  }
+
+  .modal-body p {
+    font-size: 18px;
+    font-weight: 700;
+    color: #93D55C;
+    margin-bottom: 25px;
+  }
+
+  .modal-body li{
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 20px;
+
+  }
+
+
+  .form-control {
+    border: 1px solid #ddd;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+
+
+  .btn-success {
+    background-color: #299E60;
+    border: none;
+    font-weight: bold;
+    padding: 10px;
+    color: #fff;
+
+  }
+
+  .btn-success:hover {
+    background-color: #188048;
+    color: #fff;
+
+  }
+
+  .layout-about{
+    margin-top: 110px;
+  }
+
+  .copyable-resi{
+    cursor: pointer;
+  }
+
+
+
+  .btn-close {
+    border: none;
+    color: #3B1B36;
+  }
+
+.border-radius{
+    border-radius: 0;
+  }
+
+  .button-buy-in-card:hover {
+    background-color: #188048;
+    color: #fff;
+  }
+
+  .btn-buy:hover{
+    background-color: #188048;
+    color: #fff;
+  }
+
+  .button-banner:hover{
+    background-color: #188048;
+    color: #fff;
+  }
+
+  .button-about:hover{
+    background-color: #188048;
+    color: #fff;
+  }
+
+  /* Responsif untuk tablet (width max 768px) */
+@media only screen and (max-width: 768px) {
+    .group-text-banner {
+        margin-top: 120px;
+        width: 100%;
+        text-align: center;
+    }
+
+
+    .heading-one-banner {
+        font-size: 36px;
+        line-height: 50px;
+    }
+
+    .text-paragraf-banner {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .card-food{
+        width: 40%;
+        margin: 0% auto;
+    }
+
+    .button-banner {
+        width: 180px;
+        height: 45px;
+        margin-top: 12px;
+    }
+
+    .button-about{
+        width: 180px;
+        height: 45px;
+        margin-top: 12px;
+    }
+
+    .img-layout-about{
+       margin-top: 50px;
+    }
+
+    .image-banner {
+        margin-top: 110px;
+    }
+
+    .text-paragraf-our {
+        width: 90%;
+    }
+
+    .heading-one-about {
+        font-size: 30px;
+        width: 100%;
+        line-height: 30px;
+    }
+
+    .text-paragraf-about {
+        font-size: 12px;
+       width: 100%;
+    }
+
+    .card-salad-food {
+        margin-bottom: 20px;
+    }
+
+    .custom-footer p {
+        font-size: 12px;
+    }
+}
+
+/* Responsif untuk HP (width max 480px) */
+@media only screen and (max-width: 480px) {
+    .group-text-banner {
+        margin-top: 100px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .heading-one-banner {
+        font-size: 28px;
+        line-height: 40px;
+    }
+
+
+
+    .group-text-about {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Pusatkan secara horizontal */
+    }
+    .card-food{
+        width: 50%;
+    }
+
+    .text-paragraf-banner {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .button-banner {
+        width: 150px;
+        height: 50px;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .image-banner {
+        margin-top: 40px;
+        width: 60%;
+    }
+
+    .img-layout{
+        text-align: center;
+    }
+
+    .img-layout-about {
+        display: flex;
+    }
+
+    .margin-top-about{
+        margin-top: 80px;
+    }
+
+    .img-layout-about img{
+        width: 60%;
+        margin: 0% auto;
+
+    }
+
+    .heading-one-about {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .text-paragraf-about {
+        width: 90%;
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    .text-point-paragraf-about {
+        width: 90%;
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    .card-salad-food {
+        margin-bottom: 15px;
+    }
+
+    .product-title {
+        font-size: 24px;
+    }
+
+    .product-price {
+        font-size: 30px;
+    }
+
+    .btn-buy {
+        width: 100px;
+        height: 40px;
+    }
+
+    .custom-footer p {
+        font-size: 10px;
+    }
+}
