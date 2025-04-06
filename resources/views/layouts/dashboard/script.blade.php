@@ -9,7 +9,7 @@
 <!--end::Page Vendors Javascript-->
 <!--begin::Page Custom Javascript(used by this page)-->
 <script src="{{ asset('template/base-admin/dist/assets/js/widgets.bundle.js')}}"></script>
-<script src="{{ asset('template/base-admin/dist/assets/js/custom/widgets.js')}}"></script>
+{{-- <script src="{{ asset('template/base-admin/dist/assets/js/custom/widgets.js')}}"></script> --}}
 <script src="{{ asset('template/base-admin/dist/assets/js/custom/apps/chat/chat.js')}}"></script>
 <script src="{{ asset('template/base-admin/dist/assets/js/custom/utilities/modals/upgrade-plan.js')}}"></script>
 <script src="{{ asset('template/base-admin/dist/assets/js/custom/utilities/modals/create-app.js')}}"></script>

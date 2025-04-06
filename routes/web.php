@@ -162,6 +162,7 @@ Route::middleware(['admin'])->group(function () {
         // Add Ons Route
         Route::get('/excel-export' , 'export')->name('orders.get.export');
         Route::get('/orders/export', [OrderController::class, 'export'])->name('orders.export');
+        Route::get('/orders/api/order-stats', [OrderController::class, 'orderStats'])->name('orders.order-stats');
     });
 
     // Regulation

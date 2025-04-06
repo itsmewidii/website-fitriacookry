@@ -6,7 +6,7 @@
         <!--begin::Container-->
         <div id="kt_content_container" class="container-fluid">
             <!--begin::Row-->
-            <div class="row gy-5 g-xl-8">
+            <div class="row gy-5 g-xl-8 mb-5">
                 <!--begin::Col-->
                 <div class="col-xl-12">
                     <!--begin::Mixed Widget 2-->
@@ -115,12 +115,15 @@
                                                         </g>
                                                     </svg><!--end::Svg Icon--></span>
                                                 <!--end::Svg Icon-->
-                                                <h1 href="#" class="text-primary fw-bold fs-6 mt-3">Jumlah Keuntungan</h1>
+                                                <h1 href="#" class="text-primary fw-bold fs-6 mt-3">Jumlah Keuntungan
+                                                </h1>
                                             </div>
                                             <div>
                                                 <h2 class="text-bold text-primary fs-1 mb-0" id="counter-profit">
                                                     @php
-                                                        $totalPrize = collect($datas['transaction'])->sum('total_price');
+                                                        $totalPrize = collect($datas['transaction'])->sum(
+                                                            'total_price',
+                                                        );
                                                     @endphp
                                                     {{ isset($datas['transaction']) ? 'Rp ' . number_format($totalPrize, 2, ',', '.') : 'Rp 0,00' }}
                                                 </h2>
@@ -138,6 +141,148 @@
                 </div>
                 <!--end::Row-->
             </div>
+            <div class="row g-5 g-xl-8">
+                <div class="col-xl-12">
+                    <div class="card card-xl-stretch mb-xl-8">
+                        <div class="card-header border-0 pt-5">
+                            <h3 class="card-title align-items-start flex-column">
+                                <span class="card-label fw-bolder fs-3 mb-1">Total Order</span>
+                                <span class="text-muted fw-bold fs-7">Grafik Total Order Tahun, Bulan, Mingguan</span>
+                            </h3>
+                            <div class="card-toolbar" data-kt-buttons="true">
+                                <a class="btn btn-sm btn-color-muted btn-active btn-active-primary active px-4 me-1"
+                                    id="kt_charts_widget_3_year_btn">Tahun</a>
+                                <a class="btn btn-sm btn-color-muted btn-active btn-active-primary px-4 me-1"
+                                    id="kt_charts_widget_3_month_btn">Bulan</a>
+                                <a class="btn btn-sm btn-color-muted btn-active btn-active-primary px-4"
+                                    id="kt_charts_widget_3_week_btn">Mingguan</a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div id="kt_widget_data" style="height: 350px"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+@endsection
+
+@section('script')
+    <script>
+        var KTWidgets = {
+            init: function() {
+                fetchDataAndRenderChart('year');
+
+                document.getElementById('kt_charts_widget_3_year_btn').addEventListener('click', function() {
+                    fetchDataAndRenderChart('year');
+                });
+
+                document.getElementById('kt_charts_widget_3_month_btn').addEventListener('click', function() {
+                    fetchDataAndRenderChart('month');
+                });
+
+                document.getElementById('kt_charts_widget_3_week_btn').addEventListener('click', function() {
+                    fetchDataAndRenderChart('week');
+                });
+            }
+        };
+
+        function fetchDataAndRenderChart(range) {
+            const chartContainer = document.querySelector('#kt_widget_data');
+            chartContainer.innerHTML = "";
+            fetch(`/orders/orders/api/order-stats?range=${range}`)
+                .then(response => response.json())
+                .then(response => {
+                    const colors = {
+                        gray500: KTUtil.getCssVariableValue("--bs-gray-500"),
+                        gray200: KTUtil.getCssVariableValue("--bs-gray-200"),
+                        info: KTUtil.getCssVariableValue("--bs-info"),
+                        lightInfo: KTUtil.getCssVariableValue("--bs-light-info")
+                    };
+                    const options = {
+                        series: [{
+                            name: "Total Order",
+                            data: response.data.map(d => parseInt(d)),
+                        }],
+                        chart: {
+                            fontFamily: "Poppins",
+                            type: "area",
+                            height: 350,
+                            toolbar: {
+                                show: false
+                            }
+                        },
+                        dataLabels: {
+                            enabled: false
+                        },
+                        fill: {
+                            type: "solid",
+                            opacity: 1
+                        },
+                        stroke: {
+                            curve: "smooth",
+                            show: true,
+                            width: 3,
+                            colors: [colors.info],
+                        },
+                        xaxis: {
+                            categories: response.labels,
+                            labels: {
+                                style: {
+                                    colors: colors.gray500,
+                                    fontSize: "12px"
+                                }
+                            },
+                            axisBorder: {
+                                show: false
+                            },
+                            axisTicks: {
+                                show: false
+                            },
+                            crosshairs: {
+                                position: "front",
+                                stroke: {
+                                    color: colors.info,
+                                    width: 1,
+                                    dashArray: 3
+                                }
+                            }
+                        },
+                        yaxis: {
+                            labels: {
+                                style: {
+                                    colors: colors.gray500,
+                                    fontSize: "12px"
+                                }
+                            }
+                        },
+                        colors: [colors.lightInfo],
+                        grid: {
+                            borderColor: colors.gray200,
+                            strokeDashArray: 4,
+                            yaxis: {
+                                lines: {
+                                    show: true
+                                }
+                            }
+                        },
+                        markers: {
+                            strokeColor: colors.info,
+                            strokeWidth: 3
+                        }
+                    };
+
+                    new ApexCharts(chartContainer, options).render();
+                })
+                .catch(err => {
+                    console.error("Failed to load data:", err);
+                });
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            KTWidgets.init();
+        });
+    </script>
+
 @endsection

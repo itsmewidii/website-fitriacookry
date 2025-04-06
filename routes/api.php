@@ -15,6 +15,8 @@ use Illuminate\Http\Exceptions\HttpResponseException;
 use App\Http\Controllers\API\V1\PriceBranchController;
 
 
+
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -59,8 +61,6 @@ Route::prefix('v1')->group(function() {
         Route::get('/detail/{id}', [BranchController::class, 'show']);
         Route::get('/get-price/{branch_id}', [PriceBranchController::class, 'getPriceByBranchId']);
         Route::post('create-price', [PriceBranchController::class, 'create']);
-
-
     });
 
     // Example
